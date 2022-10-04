@@ -8,7 +8,7 @@ import java.util.prefs.PreferencesFactory
 //Aqui es donde heredaremos de la clase principal para llenar la base de datos
 //Agregamos los parametros que tendra nuestra base de datos y su tipo
 class AdminSQLlite
-    (Contex: Context?, name:String?,factory: PreferencesFactory:SQLiteDatabase.CursorFactory,version:Int):SQLiteOpenHelper(Contex,name,factory, version)  {
+    (Contex: Context?, name:String?,factory:SQLiteDatabase.CursorFactory,version:Int):SQLiteOpenHelper(Contex,name,factory, version)  {
     //metodos implementados en base al AdminSQLlite
 
     override fun onCreate(baseDeDatos: SQLiteDatabase?) {
