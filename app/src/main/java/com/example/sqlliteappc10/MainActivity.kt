@@ -41,6 +41,13 @@ class MainActivity : AppCompatActivity() {
             registro.put("precio",precio)
 
             BaseDatos.insert("articulos", null, registro)
+            BaseDatos.close()
+
+            edit_Codigo.setText("")
+            edit_Descripcion.setText("")
+            edit_precio.setText("")
+
+            Toast.makeText(this, "Registro Exitoso",Toast.LENGTH_LONG).show()
 
         }else
         {//Esto es por si el usuario no llena uno o todos los campos
