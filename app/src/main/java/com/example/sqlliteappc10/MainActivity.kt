@@ -2,6 +2,7 @@ package com.example.sqlliteappc10
 
 import android.content.ContentValues
 import android.content.Context
+import android.content.Intent
 import android.database.sqlite.SQLiteDatabase
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -149,9 +150,12 @@ class MainActivity : AppCompatActivity() {
             }
 
         }else{Toast.makeText(this,"Debes ingresar un codigo", Toast.LENGTH_LONG).show()}
+    }
 
-
-
+    fun siguiente (v:View)
+    {
+        val ventana: Intent = Intent(applicationContext,SharenPreferenceApp::class.java)
+        startActivity(ventana)
     }
 
 }
