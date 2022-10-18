@@ -62,8 +62,31 @@
         android:layout_width="115dp"
         android:layout_height="44dp"
         android:layout_marginTop="25dp"
+        android:onClick="buscar"
         android:text="BUSCAR"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnReg" />
+
+    <Button
+        android:id="@+id/btnModificar"
+        android:layout_width="119dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="28dp"
+        android:onClick="Modificaar"
+        android:text="Modificar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnBuscar" />
+
+    <Button
+        android:id="@+id/btnEliminar"
+        android:layout_width="119dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="32dp"
+        android:text="Eliminar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnModificar" />
 </androidx.constraintlayout.widget.ConstraintLayout>
