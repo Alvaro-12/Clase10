@@ -124,6 +124,32 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this,"Registro exitoso", Toast.LENGTH_LONG).show()
         }else
         {Toast.makeText(this,"Rellene todos los campos", Toast.LENGTH_LONG).show()}
+    }
+
+    fun eliminar(v:View)
+    {val admin = AdminSQLlite(this,"TIENDA",null,1)
+        val BaseDatos:SQLiteDatabase=admin.writableDatabase //este ultimo ayuda a leer y escribir en nuestra base de datos
+
+        val codigo = edit_Codigo.text.toString()
+
+        if(!codigo.isEmpty())
+        {val canitdad:Int = BaseDatos.delete("aticulos", "codigo=${codigo}", null)
+            BaseDatos.close()
+            edit_Codigo.setText("")
+            edit_Descripcion.setText("")
+            edit_precio.setText("")
+
+            if(canitdad==1)
+            {
+                Toast.makeText(this,"Articulo Eliminado", Toast.LENGTH_LONG).show()
+                BaseDatos.close()
+            }else{
+                Toast.makeText(this,"No existe el articulo", Toast.LENGTH_LONG).show()
+                BaseDatos.close()
+            }
+
+        }else{Toast.makeText(this,"Debes ingresar un codigo", Toast.LENGTH_LONG).show()}
+
 
 
     }
