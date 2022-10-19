@@ -85,6 +85,7 @@
         android:layout_width="119dp"
         android:layout_height="51dp"
         android:layout_marginTop="32dp"
+        android:onClick="eliminar"
         android:text="Eliminar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
